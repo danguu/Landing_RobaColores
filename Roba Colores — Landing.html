@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Conoce Roba Colores, el juego de mesa pirata de pixel art para 2 a 4 jugadores.">
+  <title>Roba Colores — El juego de mesa pirata en pixel art</title>
+  <link rel="preload" href="Meter/fondo.jpg" as="image">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav aria-label="Navegación principal">
+    <a class="brand px" href="#home">ROBA COLORES</a>
+    <div class="nav-menus">
+      <details class="game-menu nav-menu">
+        <summary>Juego</summary>
+        <div class="nav-menu__items">
+          <a href="#reglas">Reglas</a>
+          <a href="#categorias">Categorías</a>
+          <a href="#pixeles">Píxeles</a>
+          <a href="#niveles">Niveles</a>
+        </div>
+      </details>
+      <details class="about-menu nav-menu">
+        <summary>Acerca de</summary>
+        <div class="nav-menu__items">
+          <a href="#personajes">Personajes</a>
+          <a href="#mapa">Mapa</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+
+  <main id="content">
+    <header class="hero page-view" id="home">
+      <div>
+        <p class="tag px">▶ PRÓXIMAMENTE · UNITY · 2-4 JUGADORES</p>
+        <h1>ROBA<span>COLORES</span></h1>
+        <p class="lead">
+          Recorre el mapa del tesoro, roba los colores de tus rivales y arma el pixel art más rápido
+          que nadie. Solo puede haber un pirata ganador.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#final">▶ Jugar</a>
+          <a class="btn alt" href="#reglas">Cómo se juega</a>
+        </div>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="board" id="board"></div>
+        <img class="pirate" src="Meter/Jack_SinFondo.png" alt="">
+      </div>
+    </header>
+
+    <section id="reglas" class="alt-bg page-view" hidden>
+      <h2>CÓMO SE JUEGA</h2>
+      <p class="sub">Un tablero 3D, un dado y mucha picardía.</p>
+      <div class="steps">
+        <div class="card">
+          <div class="n">01</div>
+          <h3>TIRA EL DADO</h3>
+          <p>El dado indica el número de casillas a mover. Quien lo lanza es el jugador a vencer.</p>
+        </div>
+        <div class="card">
+          <div class="n">02</div>
+          <h3>COLOR</h3>
+          <p>La casilla de color muestra la categoría a jugar. Mientras se juega, todos comparten el mismo color.</p>
+        </div>
+        <div class="card">
+          <div class="n">03</div>
+          <h3>SACA UNA TARJETA</h3>
+          <p>La categoria mostrara una figura. Dependiendo de la parte del mapa elige las tarjetas fáciles, medias o difíciles.</p>
+        </div>
+        <div class="card">
+          <div class="n">04</div>
+          <h3>ARMA EL PIXEL ART</h3>
+          <p>
+            Tienes 1:30 min. Si quien tiene el turno no lo logra, pasa quien sí lo hizo a tiempo y este roba una ilera de píxeles. Si hay empate, el que tenga mejor pixel art gana.
+            ¡Solo hay un ganador!
+          </p>
+        </div>
+        <div class="card">
+          <div class="n">05</div>
+          <h3>GANADOR</h3>
+          <p>
+            El jugador que logre llegar al final del tablero o logre dejar a los demas jugadores sin suficientes pixeles, gana.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="categorias" class="page-view" hidden>
+      <h2>COLORES Y CATEGORÍAS</h2>
+      <p class="sub">
+        Cada color del tablero esconde una categoría. 12 tarjetas por categoría en la versión completa,
+        6 en la demo.
+      </p>
+      <div class="cats">
+        <div class="cat cat--blue">
+          <i>🎮</i>
+          <b>PERSONAJES DE VIDEJUEGOS</b>
+        </div>
+        <div class="cat cat--yellow">
+          <i>🍜</i>
+          <b>ANIME</b>
+        </div>
+        <div class="cat cat--red">
+          <i>🦸</i>
+          <b>SUPER HEROES</b>
+        </div>
+        <div class="cat cat--orange">
+          <i>🤪</i>
+          <b>CARICATURAS</b>
+        </div>
+        <div class="cat cat--green">
+          <i>🐢</i>
+          <b>ANIMALES</b>
+        </div>
+        <div class="cat cat--purple">
+          <i>⚽</i>
+          <b>DEPORTES</b>
+        </div>
+        <div class="cat cat--">
+          <i>?</i>
+          <b></b>
+        </div>
+        <div class="cat cat--">
+          <i>?</i>
+          <b></b>
+        </div>
+        <div class="cat cat--">
+          <i>?</i>
+          <b></b>
+        </div>
+        <div class="cat cat--">
+          <i>?</i>
+          <b></b>
+        </div>
+        <div class="cat cat--">
+          <i>?</i>
+          <b></b>
+        </div>
+        <div class="cat cat--">
+          <i>?</i>
+          <b></b>
+        </div>
+      </div>
+    </section>
+
+    <section id="pixeles" class="alt-bg page-view" hidden>
+      <div class="mini">
+        <div>
+          <h2>EL MINIJUEGO DE PÍXELES</h2>
+          <p class="sub">
+            Una cuadrícula de 25×25 y una imagen por construir. Cada color tiene su propio contador
+            de píxeles y el reloj no perdona.
+          </p>
+          <button class="btn" id="go">▶ Simulación</button>
+        </div>
+        <div class="frame">
+          <div class="hud">
+            <b>PIXELES</b>
+            <b id="time">1:30</b>
+          </div>
+          <div id="grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="niveles" class="page-view" hidden>
+      <h2>3 NIVELES DE TABLERO</h2>
+      <p class="sub">El mapa cambia contigo. Más caminos, más caos.</p>
+      <div class="lv">
+        <div class="card">
+          <div class="n">I</div>
+          <h3>CLASIFICACION</h3>
+          <p>La dificultad es dependiendo en que zona del mapa estés.</p>
+        </div>
+        <div class="card">
+          <div class="n">II</div>
+          <h3>MÁS CAMINOS</h3>
+          <p>El mapa se llena de atajos y bifurcaciones. Elige bien tu ruta.</p>
+        </div>
+        <div class="card">
+          <div class="n">III</div>
+          <h3>OBSTÁCULOS</h3>
+          <p>Casillas falsas, tiempo límite y sorpresas escondidas en el camino.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="personajes" class="alt-bg page-view" hidden>
+      <h2>PERSONAJES</h2>
+      <p class="sub">
+        Antes de zarpar, cada jugador podrá escoger el personaje que más le guste. Cada uno tiene
+        su propio estilo para que puedas encontrar a tu favorito y reconocerlo durante la aventura.
+        Estos son algunos de los personajes que podrás elegir:
+      </p>
+      <div class="characters">
+        <article class="character-card">
+          <img src="Meter/Jack.png" alt="Pirata con sombrero oscuro y una brújula">
+          <h3>Jack S</h3>
+          <p>Un capitán listo para orientarse y buscar el tesoro.</p>
+        </article>
+        <article class="character-card">
+          <img src="Meter/ACE.png" alt="Aventurero con sombrero naranja">
+          <h3>A_C_E</h3>
+          <p>Un explorador con ganas de lanzarse a cualquier desafío.</p>
+        </article>
+        <article class="character-card">
+          <img src="Meter/Vela.png" alt="Personaje pirata rubio con arco">
+          <h3>Vela</h3>
+          <p>Una navegante hábil que siempre está lista para apuntar a su objetivo.</p>
+        </article>
+        <article class="character-card">
+          <img src="Meter/OCTO.png" alt="Pirata verde con sombrero y bigote de tentáculos">
+          <h3>OCTO</h3>
+          <p>Un personaje misterioso con un estilo difícil de olvidar.</p>
+        </article>
+        <article class="character-card">
+          <img src="Meter/Cruz.png" alt="Personaje rubio con pañuelo rojo y arco">
+          <h3>Cruz</h3>
+          <p>Una aventurera preparada para abrirse camino en el mapa.</p>
+        </article>
+        <article class="character-card">
+          <img src="Meter/Buck.png" alt="Nutria pirata con chaqueta azul y espada">
+          <h3>Buck</h3>
+          <p>Un compañero fuerte y simpático para esta travesía.</p>
+        </article>
+        <article class="character-card">
+          <img src="Meter/KTU.png" alt="Pulpo verde pirata con espada y pistola">
+          <h3>KTU</h3>
+          <p>Un pirata de nueve tentáculos listo para la aventura.</p>
+        </article>
+        <article class="character-card">
+          <img src="Meter/Simon.png" alt="Pirata con pañuelo rojo y camisa a rayas">
+          <h3>Simón</h3>
+          <p>Un marinero clásico que se suma a la búsqueda del tesoro.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="mapa" class="page-view" hidden>
+      <div class="map-info">
+        <div>
+          <h2>EL MAPA DEL JUEGO</h2>
+          <p class="sub">
+            El mapa será el tablero donde la tripulación avance en busca del tesoro. Sus casillas
+            de colores conectarán la aventura con las categorías y los retos de píxeles. Aquí podrás
+            descubrir sus caminos y detalles cuando el diseño esté terminado.
+          </p>
+        </div>
+        <div class="map-placeholder map-image" role="img" aria-label="Mapa del juego de Roba Colores">
+          <img src="Meter/mapa.jpeg" alt="Mapa del juego Roba Colores">
+        </div>
+      </div>
+    </section>
+
+    <section id="final" class="final page-view" hidden>
+      <h2>¿LISTO PARA ROBAR COLORES?</h2>
+      <p class="sub sub--centered">Únete a la tripulación y entérate del lanzamiento.</p>
+      <div class="cta">
+        <a class="btn" href="#">▶ Descargar demo</a>
+        <a class="btn alt" href="#">Lista de espera</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-view" id="footer" hidden>© 2026 Roba Colores · Hecho con Unity y mucho pixel art</footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/board.js"></script>
+  <script src="js/pixel-demo.js"></script>
+</body>
+</html>
